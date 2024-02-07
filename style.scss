@@ -1,4 +1,4 @@
-@import 'vendors/reset.scss';
+
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -49,6 +49,38 @@ table {
 	border-spacing: 0;
 }
 
-.element{
-  color: lightgreen;
+.element--otherNonMetal{
+  background-color: #00ff77;
+}
+
+.element--nobleGas{
+  background-color: #66cdf9;
+}
+
+.element--alkaliMetal{
+  background-color: #ffca5c;
+}
+
+.element--alkalineEarthMetal{
+  background-color: #ffff75;
+}
+
+.element--metalloid{
+  background-color: #64df96;
+}
+
+.element--otherNonMetal{
+  background-color: #00ff66;
+}
+
+.element--nobleGas{
+  background-color: #5dccf9;
+}
+
+.element--postTransitionMetal{
+  background-color: #8edece;
+}
+
+.element--transitionMetal{
+  background-color: #e1babb;
 }
