@@ -44,6 +44,13 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
+
+@mixin large{
+	@media (min-width:100em){
+		@content;
+	}
+}
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -83,4 +90,39 @@ table {
 
 .element--transitionMetal{
   background-color: #e1babb;
+}
+
+.element--none{
+	background-color: #d3c9ca;
+  }
+
+.table{
+	display: grid;
+	gap: 5px;
+	grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+	@include large{
+		grid-template-columns: repeat(18, 1fr);
+		grid-template-rows: repeat(7, 1fr);
+	}
+}
+
+.element{
+	aspect-ratio: 1 / 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: small;
+}
+
+@for $i from 1 through 18 {
+	[data-group="#{$i}"]{
+		grid-column: $i;
+	}
+}
+
+@for $i from 1 through 7 {
+	[data-period="#{$i}"]{
+		grid-row: $i;
+	}
 }
